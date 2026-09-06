@@ -80,7 +80,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       eyebrow: "Independent holding company · Romania",
       titleLead: "Built for",
       titleAccent: "the long view.",
-      body: "EVA Conseil is an independent Romanian holding company partnering with remarkable businesses, real assets and ideas with the potential to endure.",
+      body: "EVA Conseil Europe is an independent Romanian holding company partnering with remarkable businesses, real assets and ideas with the potential to endure.",
       primaryCta: "Discover our approach",
       secondaryCta: "Start a conversation",
       scroll: "Explore",
@@ -167,8 +167,8 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       geography: "Romania · Europe",
     },
     meta: {
-      title: "EVA Conseil | Independent Holding Company in Romania",
-      description: "EVA Conseil is an independent Romanian holding company focused on patient ownership, active partnership and enduring value.",
+      title: "EVA Conseil Europe | Independent Holding Company in Romania",
+      description: "EVA Conseil Europe is an independent Romanian holding company focused on patient ownership, active partnership and enduring value.",
     },
   },
   fr: {
@@ -184,7 +184,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       eyebrow: "Société holding indépendante · Roumanie",
       titleLead: "Pensé pour",
       titleAccent: "le temps long.",
-      body: "EVA Conseil est une société holding roumaine indépendante. Nous nouons des partenariats avec des entreprises remarquables, investissons dans des actifs réels et soutenons des idées à fort potentiel de long terme.",
+      body: "EVA Conseil Europe est une société holding roumaine indépendante. Nous nouons des partenariats avec des entreprises remarquables, investissons dans des actifs réels et soutenons des idées à fort potentiel de long terme.",
       primaryCta: "Découvrir notre approche",
       secondaryCta: "Échanger avec nous",
       scroll: "Découvrir",
@@ -271,8 +271,8 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       geography: "Roumanie · Europe",
     },
     meta: {
-      title: "EVA Conseil | Société holding indépendante en Roumanie",
-      description: "EVA Conseil est une société holding roumaine indépendante fondée sur un actionnariat patient, un partenariat actif et la création de valeur durable.",
+      title: "EVA Conseil Europe | Société holding indépendante en Roumanie",
+      description: "EVA Conseil Europe est une société holding roumaine indépendante fondée sur un actionnariat patient, un partenariat actif et la création de valeur durable.",
     },
   },
   ro: {
@@ -288,7 +288,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       eyebrow: "Holding independent · România",
       titleLead: "Construim cu",
       titleAccent: "o viziune pe termen lung.",
-      body: "EVA Conseil este un holding românesc independent care colaborează cu companii remarcabile și investește în active reale și idei cu potențial pe termen lung.",
+      body: "EVA Conseil Europe este un holding românesc independent care colaborează cu companii remarcabile și investește în active reale și idei cu potențial pe termen lung.",
       primaryCta: "Descoperă abordarea noastră",
       secondaryCta: "Să discutăm",
       scroll: "Descoperă",
@@ -375,8 +375,8 @@ export const siteCopy: Record<Locale, SiteCopy> = {
       geography: "România · Europa",
     },
     meta: {
-      title: "EVA Conseil | Holding independent în România",
-      description: "EVA Conseil este un holding românesc independent, axat pe un acționariat pe termen lung, parteneriate active și crearea de valoare durabilă.",
+      title: "EVA Conseil Europe | Holding independent în România",
+      description: "EVA Conseil Europe este un holding românesc independent, axat pe un acționariat pe termen lung, parteneriate active și crearea de valoare durabilă.",
     },
   },
 };

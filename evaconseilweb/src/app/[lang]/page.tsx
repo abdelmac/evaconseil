@@ -32,7 +32,7 @@ export async function generateMetadata({
     description: copy.description,
     openGraph: {
       type: "website",
-      siteName: "EVA Conseil",
+      siteName: "EVA Conseil Europe",
       title: copy.title,
       description: copy.description,
       locale: openGraphLocale,

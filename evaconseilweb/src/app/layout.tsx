@@ -9,27 +9,27 @@ const documentLanguageScript = `(() => {
 })();`;
 
 export const metadata: Metadata = {
-  applicationName: "EVA Conseil",
-  title: "EVA Conseil | Independent Holding Company in Romania",
+  applicationName: "EVA Conseil Europe",
+  title: "EVA Conseil Europe | Independent Holding Company in Romania",
   description:
-    "EVA Conseil is an independent Romanian holding company focused on patient ownership, active partnership and enduring value.",
+    "EVA Conseil Europe is an independent Romanian holding company focused on patient ownership, active partnership and enduring value.",
   keywords: [
-    "EVA Conseil",
+    "EVA Conseil Europe",
     "Romanian holding company",
     "long-term investment",
     "patient capital",
     "Romania",
   ],
-  authors: [{ name: "EVA Conseil" }],
-  creator: "EVA Conseil",
+  authors: [{ name: "EVA Conseil Europe" }],
+  creator: "EVA Conseil Europe",
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
     type: "website",
-    siteName: "EVA Conseil",
-    title: "EVA Conseil | Built for the long view",
+    siteName: "EVA Conseil Europe",
+    title: "EVA Conseil Europe | Built for the long view",
     description:
       "An independent Romanian holding company focused on patient ownership, active partnership and enduring value.",
     locale: "en_US",

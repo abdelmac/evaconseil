@@ -30,22 +30,22 @@ const accessibilityLabels: Record<
   { home: string; primaryNav: string; mobileNav: string; overview: string }
 > = {
   en: {
-    home: "EVA Conseil — home",
+    home: "EVA Conseil Europe — home",
     primaryNav: "Primary navigation",
     mobileNav: "Mobile navigation",
-    overview: "EVA Conseil at a glance",
+    overview: "EVA Conseil Europe at a glance",
   },
   fr: {
-    home: "EVA Conseil — accueil",
+    home: "EVA Conseil Europe — accueil",
     primaryNav: "Navigation principale",
     mobileNav: "Navigation mobile",
-    overview: "EVA Conseil en bref",
+    overview: "EVA Conseil Europe en bref",
   },
   ro: {
-    home: "EVA Conseil — pagina principală",
+    home: "EVA Conseil Europe — pagina principală",
     primaryNav: "Navigare principală",
     mobileNav: "Navigare mobilă",
-    overview: "EVA Conseil pe scurt",
+    overview: "EVA Conseil Europe pe scurt",
   },
 };
 
@@ -158,7 +158,7 @@ export function HoldingSite({ locale }: { locale: Locale }) {
             <BrandMark />
             <span className="brand-wordmark">
               <strong>EVA</strong>
-              <span>CONSEIL</span>
+              <span>CONSEIL EUROPE</span>
             </span>
           </a>
 
@@ -405,7 +405,7 @@ export function HoldingSite({ locale }: { locale: Locale }) {
             <BrandMark />
             <span className="brand-wordmark">
               <strong>EVA</strong>
-              <span>CONSEIL</span>
+              <span>CONSEIL EUROPE</span>
             </span>
           </a>
           <p>{copy.footer.descriptor}</p>
@@ -415,7 +415,7 @@ export function HoldingSite({ locale }: { locale: Locale }) {
           </a>
         </div>
         <div className="container footer-bottom">
-          <span>© {new Date().getFullYear()} EVA Conseil</span>
+          <span>© {new Date().getFullYear()} EVA Conseil Europe</span>
           <span>{copy.footer.rights}</span>
           <span>{copy.footer.geography}</span>
         </div>

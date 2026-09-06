@@ -1,6 +1,6 @@
-# EVA Conseil
+# EVA Conseil Europe
 
-A static, multilingual corporate website for EVA Conseil, an independent holding company based in Romania.
+A static, multilingual corporate website for EVA Conseil Europe, an independent holding company based in Romania.
 
 ## Languages
 

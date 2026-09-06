@@ -1,18 +1,19 @@
 :root {
-  --pine-950: #0a1d18;
-  --pine-900: #0f2a23;
-  --pine-800: #16382f;
-  --pine-700: #245043;
-  --ivory: #f4f0e7;
-  --ivory-deep: #e9e2d4;
-  --paper: #fbf9f4;
-  --terracotta: #c96f46;
-  --terracotta-dark: #a84f2e;
-  --sage: #a7bcae;
-  --ink: #13231e;
-  --muted: #617069;
-  --line-dark: rgba(244, 240, 231, 0.18);
-  --line-light: rgba(19, 35, 30, 0.15);
+  --pine-950: #071a2e;
+  --pine-900: #0d2948;
+  --pine-800: #183e64;
+  --pine-700: #29567f;
+  --ivory: #f7f8fa;
+  --ivory-deep: #e8edf2;
+  --paper: #ffffff;
+  --terracotta: #c69a3b;
+  --terracotta-dark: #936110;
+  --sage: #a7b5c4;
+  --ink: #102a46;
+  --muted: #59697a;
+  --line-dark: rgba(255, 255, 255, 0.18);
+  --line-light: rgba(13, 41, 72, 0.15);
+  --gold-gradient: linear-gradient(125deg, #c09237 0%, #ebd07d 48%, #bc8b2f 100%);
   --font-display: Georgia, "Times New Roman", serif;
   --font-body: Arial, Helvetica, sans-serif;
   --page-gutter: clamp(1.25rem, 4vw, 4rem);
@@ -43,7 +44,7 @@ body {
 }
 
 ::selection {
-  background: var(--terracotta);
+  background: var(--terracotta-dark);
   color: white;
 }
 
@@ -263,7 +264,7 @@ svg {
   padding: 1rem 1.4rem;
   background: var(--paper);
   color: var(--ink);
-  box-shadow: 0 1.5rem 4rem rgba(3, 15, 12, 0.28);
+  box-shadow: 0 1.5rem 4rem rgba(7, 26, 46, 0.28);
 }
 
 .mobile-navigation > nav a {
@@ -294,8 +295,8 @@ svg {
   min-height: 52rem;
   overflow: hidden;
   background:
-    radial-gradient(circle at 74% 43%, rgba(67, 111, 94, 0.25), transparent 32%),
-    linear-gradient(132deg, var(--pine-900) 0%, #0a211b 72%);
+    radial-gradient(circle at 74% 43%, rgba(198, 154, 59, 0.18), transparent 32%),
+    linear-gradient(132deg, var(--pine-900) 0%, #071a2e 72%);
   color: var(--ivory);
 }
 
@@ -374,6 +375,10 @@ svg {
 .hero h1 em {
   color: var(--terracotta);
   font-weight: 400;
+  background: var(--gold-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-intro {
@@ -469,7 +474,7 @@ svg {
 
 .orbit-inner {
   inset: 17%;
-  border-color: rgba(201, 111, 70, 0.52);
+  border-color: rgba(198, 154, 59, 0.52);
 }
 
 .orbit-axis {
@@ -498,7 +503,7 @@ svg {
   border: 2px solid var(--pine-900);
   border-radius: 50%;
   background: var(--terracotta);
-  box-shadow: 0 0 0 1px rgba(201, 111, 70, 0.55);
+  box-shadow: 0 0 0 1px rgba(198, 154, 59, 0.55);
 }
 
 .orbit-node-one {
@@ -528,7 +533,7 @@ svg {
   justify-content: center;
   gap: 0.5rem;
   border: 1px solid rgba(244, 240, 231, 0.42);
-  background: rgba(15, 42, 35, 0.5);
+  background: rgba(13, 41, 72, 0.5);
   color: var(--ivory);
   backdrop-filter: blur(6px);
   font-family: var(--font-display);
@@ -707,8 +712,8 @@ svg {
   margin-top: clamp(4rem, 8vw, 7rem);
   padding: clamp(3rem, 6vw, 5.5rem);
   overflow: hidden;
-  background: var(--terracotta-dark);
-  color: white;
+  background: var(--gold-gradient);
+  color: var(--pine-950);
 }
 
 .about-quote::after {
@@ -717,7 +722,7 @@ svg {
   right: -7rem;
   width: 23rem;
   height: 23rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(7, 26, 46, 0.18);
   border-radius: 50%;
   content: "";
 }
@@ -737,7 +742,7 @@ svg {
   position: absolute;
   top: 0.7rem;
   left: 2rem;
-  color: rgba(255, 255, 255, 0.12);
+  color: rgba(7, 26, 46, 0.12);
   font-family: var(--font-display);
   font-size: 12rem;
   line-height: 1;
@@ -755,7 +760,7 @@ svg {
 .independent-stamp svg {
   width: 6.6rem;
   fill: none;
-  stroke: white;
+  stroke: var(--pine-950);
   stroke-width: 1;
 }
 
@@ -1026,7 +1031,9 @@ svg {
   gap: 4rem;
   padding: clamp(3rem, 7vw, 7.2rem);
   overflow: hidden;
-  background: var(--terracotta-dark);
+  background:
+    radial-gradient(circle at 82% 32%, rgba(198, 154, 59, 0.17), transparent 32%),
+    linear-gradient(132deg, var(--pine-800), var(--pine-950));
   color: white;
 }
 
@@ -1082,6 +1089,7 @@ svg {
 
 .europe-ring-two {
   inset: 23%;
+  border-color: rgba(198, 154, 59, 0.62);
 }
 
 .europe-cross {
@@ -1121,7 +1129,7 @@ svg {
 .europe-art em {
   right: 4%;
   bottom: 20%;
-  color: rgba(255, 255, 255, 0.42);
+  color: var(--terracotta);
   font-size: 1.2rem;
   letter-spacing: 0.15em;
 }
@@ -1282,7 +1290,7 @@ svg {
 
 .not-found-page > p {
   margin: 3rem 0 1.25rem;
-  color: #e39470;
+  color: #e1c36c;
   font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.2em;
@@ -1314,10 +1322,10 @@ svg {
 @keyframes node-pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(201, 111, 70, 0);
+    box-shadow: 0 0 0 0 rgba(198, 154, 59, 0);
   }
   50% {
-    box-shadow: 0 0 0 0.65rem rgba(201, 111, 70, 0.12);
+    box-shadow: 0 0 0 0.65rem rgba(198, 154, 59, 0.12);
   }
 }
 

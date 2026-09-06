@@ -7,7 +7,7 @@ export default function NotFound() {
       <div className="not-found-mark" aria-hidden="true">
         404
       </div>
-      <p>EVA CONSEIL · ROMANIA</p>
+      <p>EVA CONSEIL EUROPE · ROMANIA</p>
       <h1>This page has moved beyond the horizon.</h1>
       <a href={`${basePath}/`}>
         Return home
