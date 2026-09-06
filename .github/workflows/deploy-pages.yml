@@ -24,9 +24,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
           cache-dependency-path: evaconseilweb/package-lock.json
+
+      - name: Set up GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
 
       - name: Install dependencies
         working-directory: evaconseilweb
@@ -35,11 +39,11 @@ jobs:
       - name: Build static site
         working-directory: evaconseilweb
         env:
-          NEXT_PUBLIC_BASE_PATH: /evaconseil
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: npm run build
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: evaconseilweb/out
 
