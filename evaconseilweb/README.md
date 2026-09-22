@@ -46,4 +46,26 @@ For this repository, the project URL is:
 
 ## Content
 
-All translated copy is kept in `src/content/site.ts`. Before publication, confirm the contact email and replace or expand the generic investment focus with the company’s approved legal and portfolio information.
+All translated copy is kept in `src/content/site.ts`. Contact requests open an email to `eva.conseil.eu@gmail.com`. The site does not submit or store messages on a server.
+
+## Custom domain: eva-europe-conseil.com
+
+1. In [repository Settings → Pages](https://github.com/abdelmac/evaconseil/settings/pages), keep **GitHub Actions** as the source. Save `eva-europe-conseil.com` under **Custom domain** before changing DNS.
+2. In Namecheap, open **Domain List → Manage → Advanced DNS**. Replace the parking records for `@` and `www` with the following records (TTL: Automatic). Keep unrelated MX/TXT records.
+
+| Type | Host | Value |
+| --- | --- | --- |
+| A Record | @ | 185.199.108.153 |
+| A Record | @ | 185.199.109.153 |
+| A Record | @ | 185.199.110.153 |
+| A Record | @ | 185.199.111.153 |
+| CNAME Record | www | abdelmac.github.io |
+
+3. Run **Actions → Deploy to GitHub Pages → Run workflow** after saving the GitHub domain. The workflow gets both the asset base path and full public URL from GitHub, so it works on the project URL and the custom domain.
+4. Wait for the DNS check and certificate to succeed, then enable **Enforce HTTPS** in Pages settings. Check `/`, `/fr/`, `/ro/`, `/robots.txt`, `/sitemap.xml` and the redirect from `www`.
+
+The custom-domain workflow uses the actual Pages setting; a `CNAME` file alone does not configure a domain for Actions deployments.
+
+For local production builds, `NEXT_PUBLIC_SITE_URL` sets the complete public URL, including any project path. It defaults to `https://eva-europe-conseil.com/`. When simulating the GitHub project URL, set `PAGES_BASE_PATH=/evaconseil` and `NEXT_PUBLIC_SITE_URL=https://abdelmac.github.io/evaconseil/` together. Canonical links, language alternatives and the sitemap share this setting.
+
+Official instructions: [GitHub custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site), [Namecheap setup](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages/).
