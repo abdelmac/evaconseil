@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { HoldingSite } from "@/components/holding-site";
-import { isLocale, locales, siteCopy } from "@/content/site";
+import { isLocale, locales } from "@/content/site";
+import { pageMetadata } from "@/lib/site-config";
 
 type LocalePageProps = {
   params: Promise<{ lang: string }>;
@@ -24,26 +25,7 @@ export async function generateMetadata({
     return {};
   }
 
-  const copy = siteCopy[lang].meta;
-  const openGraphLocale = lang === "fr" ? "fr_FR" : "ro_RO";
-
-  return {
-    title: copy.title,
-    description: copy.description,
-    openGraph: {
-      type: "website",
-      siteName: "EVA Conseil Europe",
-      title: copy.title,
-      description: copy.description,
-      locale: openGraphLocale,
-      alternateLocale: lang === "fr" ? ["en_US", "ro_RO"] : ["en_US", "fr_FR"],
-    },
-    twitter: {
-      card: "summary",
-      title: copy.title,
-      description: copy.description,
-    },
-  };
+  return pageMetadata(lang);
 }
 
 export default async function LocalePage({ params }: LocalePageProps) {

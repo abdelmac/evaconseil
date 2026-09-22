@@ -207,8 +207,8 @@ svg {
 
 .language-switcher a {
   display: grid;
-  width: 2.05rem;
-  height: 2.05rem;
+  width: 2.25rem;
+  height: 2.25rem;
   place-items: center;
   border-radius: 50%;
   color: rgba(244, 240, 231, 0.62);
@@ -234,7 +234,10 @@ svg {
 
 .mobile-navigation summary {
   display: flex;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   color: var(--ivory);
   cursor: pointer;
@@ -262,6 +265,7 @@ svg {
   right: 0;
   width: min(21rem, calc(100vw - 2rem));
   padding: 1rem 1.4rem;
+  border-top: 2px solid var(--terracotta);
   background: var(--paper);
   color: var(--ink);
   box-shadow: 0 1.5rem 4rem rgba(7, 26, 46, 0.28);
@@ -360,6 +364,8 @@ svg {
   font-weight: 400;
   letter-spacing: -0.045em;
   line-height: 0.94;
+  text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 .hero h1 {
@@ -384,13 +390,14 @@ svg {
 .hero-intro {
   max-width: 38rem;
   margin: 2.3rem 0 0;
-  color: rgba(244, 240, 231, 0.72);
+  color: rgba(244, 240, 231, 0.84);
   font-size: clamp(1.06rem, 1.5vw, 1.28rem);
   line-height: 1.7;
 }
 
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: clamp(1.5rem, 3vw, 3rem);
   margin-top: 2.7rem;
@@ -422,6 +429,7 @@ svg {
 }
 
 .arrow-icon {
+  flex: none;
   width: 1.12rem;
   height: 1.12rem;
   fill: none;
@@ -1182,6 +1190,11 @@ svg {
   color: var(--terracotta-dark);
 }
 
+.email-link > span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .email-arrow {
   display: grid;
   width: 3.2rem;
@@ -1548,9 +1561,9 @@ svg {
   }
 
   .language-switcher a {
-    width: 1.7rem;
-    height: 1.7rem;
-    font-size: 0.53rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.6rem;
   }
 
   .mobile-navigation summary > span {
@@ -1563,8 +1576,9 @@ svg {
   }
 
   .hero-grid {
-    padding-top: 9.5rem;
-    padding-bottom: 6.5rem;
+    gap: 2.75rem;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
   }
 
   .hero h1 {
@@ -1586,7 +1600,7 @@ svg {
   }
 
   .hero-art {
-    width: min(86vw, 25rem);
+    width: min(62vw, 18rem);
   }
 
   .scroll-cue {
@@ -1594,7 +1608,7 @@ svg {
   }
 
   .section {
-    padding-block: 6.5rem;
+    padding-block: 5rem;
   }
 
   .section h2,

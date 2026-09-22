@@ -1,4 +1,5 @@
 import { type Locale, locales, siteCopy } from "@/content/site";
+import { MobileNavigation } from "@/components/mobile-navigation";
 
 const basePath =
   process.env.PAGES_BASE_PATH ?? process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -79,14 +80,6 @@ function Arrow({ direction = "right" }: { direction?: "right" | "down" | "up" })
   );
 }
 
-function MenuIcon() {
-  return (
-    <svg className="menu-icon" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M4 8h16M4 16h16" />
-    </svg>
-  );
-}
-
 function FocusGlyph({ index }: { index: number }) {
   if (index === 0) {
     return (
@@ -154,7 +147,7 @@ export function HoldingSite({ locale }: { locale: Locale }) {
 
       <header className="site-header" id="top">
         <div className="container header-inner">
-          <a className="brand" href={withBasePath("/")} aria-label={a11y.home}>
+          <a className="brand" href={withBasePath(localeRoutes[locale])} aria-label={a11y.home}>
             <BrandMark />
             <span className="brand-wordmark">
               <strong>EVA</strong>
@@ -172,25 +165,16 @@ export function HoldingSite({ locale }: { locale: Locale }) {
 
           <div className="header-actions">
             <LanguageSwitcher locale={locale} />
-            <details className="mobile-navigation">
-              <summary>
-                <span>{copy.nav.menu}</span>
-                <MenuIcon />
-              </summary>
-              <nav aria-label={a11y.mobileNav}>
-                {navItems.map((item, index) => (
-                  <a key={item.href} href={item.href}>
-                    <span>0{index + 1}</span>
-                    {item.label}
-                  </a>
-                ))}
-              </nav>
-            </details>
+            <MobileNavigation
+              label={copy.nav.menu}
+              navigationLabel={a11y.mobileNav}
+              items={navItems}
+            />
           </div>
         </div>
       </header>
 
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-grid container">
             <div className="hero-copy">
@@ -257,7 +241,7 @@ export function HoldingSite({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section className="section about" id="about" aria-labelledby="about-title">
+        <section className="section about" id="about" tabIndex={-1} aria-labelledby="about-title">
           <div className="container about-grid">
             <div className="section-heading">
               <p className="eyebrow eyebrow-dark">{copy.about.eyebrow}</p>
@@ -286,7 +270,7 @@ export function HoldingSite({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section className="section focus" id="focus" aria-labelledby="focus-title">
+        <section className="section focus" id="focus" tabIndex={-1} aria-labelledby="focus-title">
           <div className="container">
             <div className="focus-header">
               <div className="section-heading section-heading-light">
@@ -327,7 +311,7 @@ export function HoldingSite({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section className="section approach" id="approach" aria-labelledby="approach-title">
+        <section className="section approach" id="approach" tabIndex={-1} aria-labelledby="approach-title">
           <div className="container approach-grid">
             <div className="approach-intro">
               <p className="eyebrow eyebrow-dark">{copy.approach.eyebrow}</p>
@@ -372,7 +356,7 @@ export function HoldingSite({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section className="section contact" id="contact" aria-labelledby="contact-title">
+        <section className="section contact" id="contact" tabIndex={-1} aria-labelledby="contact-title">
           <div className="container contact-grid">
             <div>
               <p className="eyebrow eyebrow-dark">{copy.contact.eyebrow}</p>
@@ -399,7 +383,7 @@ export function HoldingSite({ locale }: { locale: Locale }) {
         <div className="container footer-main">
           <a
             className="brand brand-footer"
-            href={withBasePath("/")}
+            href={withBasePath(localeRoutes[locale])}
             aria-label={a11y.home}
           >
             <BrandMark />

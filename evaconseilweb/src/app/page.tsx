@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { HoldingSite } from "@/components/holding-site";
-import { siteCopy } from "@/content/site";
+import { pageMetadata } from "@/lib/site-config";
 
-export const metadata: Metadata = {
-  title: siteCopy.en.meta.title,
-  description: siteCopy.en.meta.description,
-};
+export const metadata: Metadata = pageMetadata("en");
 
 export default function Home() {
   return <HoldingSite locale="en" />;
