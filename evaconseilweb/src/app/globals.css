@@ -113,41 +113,28 @@ svg {
 
 .brand {
   display: inline-flex;
+  width: 9.5rem;
   align-items: center;
-  gap: 0.8rem;
   flex: none;
 }
 
-.brand-mark {
-  width: 2.65rem;
-  height: 2.65rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.35;
+.company-logo {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1100 / 600;
+  overflow: hidden;
+  background: white;
 }
 
-.brand-mark-accent {
-  stroke: var(--terracotta);
-}
-
-.brand-wordmark {
-  display: grid;
-  line-height: 1;
-  letter-spacing: 0.16em;
-}
-
-.brand-wordmark strong {
-  font-family: var(--font-display);
-  font-size: 1.12rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-}
-
-.brand-wordmark span {
-  margin-top: 0.28rem;
-  font-size: 0.53rem;
-  font-weight: 700;
-  letter-spacing: 0.31em;
+/* Display the original artwork without its large outer margins. */
+.company-logo-image {
+  position: absolute;
+  top: -55%;
+  left: -6.818182%;
+  width: 114%;
+  max-width: none;
+  height: auto;
 }
 
 .desktop-nav {
@@ -535,24 +522,14 @@ svg {
 
 .hero-monogram {
   position: absolute;
-  inset: 33%;
+  inset: 21% 7%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  border: 1px solid rgba(244, 240, 231, 0.42);
-  background: rgba(13, 41, 72, 0.5);
-  color: var(--ivory);
-  backdrop-filter: blur(6px);
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2vw, 2rem);
-}
-
-.hero-monogram i {
-  width: 1px;
-  height: 1.7rem;
-  background: var(--terracotta);
-  transform: rotate(24deg);
+  padding: 5%;
+  border: 1px solid rgba(198, 154, 59, 0.6);
+  background: white;
+  box-shadow: 0 1rem 3rem rgba(7, 26, 46, 0.2);
 }
 
 .art-label,
@@ -1239,6 +1216,7 @@ svg {
 }
 
 .brand-footer {
+  width: 10.5rem;
   justify-self: start;
 }
 
@@ -1535,21 +1513,8 @@ svg {
     gap: 0.75rem;
   }
 
-  .brand {
-    gap: 0.55rem;
-  }
-
-  .brand-mark {
-    width: 2.15rem;
-    height: 2.15rem;
-  }
-
-  .brand-wordmark strong {
-    font-size: 0.92rem;
-  }
-
-  .brand-wordmark span {
-    font-size: 0.45rem;
+  .site-header .brand {
+    width: 7rem;
   }
 
   .header-actions {
@@ -1697,18 +1662,6 @@ svg {
     gap: 0.25rem;
   }
 
-  .site-header .brand {
-    gap: 0.4rem;
-  }
-
-  .site-header .brand-mark {
-    width: 1.9rem;
-    height: 1.9rem;
-  }
-
-  .site-header .brand-wordmark span {
-    letter-spacing: 0.2em;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

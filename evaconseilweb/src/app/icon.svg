@@ -1,5 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="32" fill="#0d2948"/>
-  <path d="M18 18h28M18 32h20M18 46h28" fill="none" stroke="#f7f8fa" stroke-width="3"/>
-  <path d="m46 18-14 28" fill="none" stroke="#c69a3b" stroke-width="3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="330 310 565 565">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#bc903c"/>
+      <stop offset=".45" stop-color="#e6c46f"/>
+      <stop offset="1" stop-color="#a97d30"/>
+    </linearGradient>
+  </defs>
+  <rect x="330" y="310" width="565" height="565" rx="90" fill="#0d2948"/>
+  <g fill="url(#gold)">
+    <path d="M377 395h87q23 0 34 25l170 301-50 80h-15Z"/>
+    <path d="M679 703c-18-20-18-48-9-77 19-54 59-87 115-93-29 50-66 110-106 170Z"/>
+    <path d="M644 665c17-91 36-167 72-207 5 25 8 51-2 71-26 45-52 92-70 136Z"/>
+    <path d="M718 541c36-48 61-84 105-84-15 38-44 57-105 84Z"/>
+    <path d="M732 499c-4-41 15-73 41-96 3 52-5 69-41 96Z"/>
+    <path d="M783 452c6-40-4-69 70-89-11 41-20 66-70 89Z"/>
+  </g>
 </svg>

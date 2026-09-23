@@ -1,5 +1,6 @@
 import { type Locale, locales, siteCopy } from "@/content/site";
 import { MobileNavigation } from "@/components/mobile-navigation";
+import Image from "next/image";
 
 const basePath =
   process.env.PAGES_BASE_PATH ?? process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -50,18 +51,18 @@ const accessibilityLabels: Record<
   },
 };
 
-function BrandMark() {
+function CompanyLogo({ preload = false }: { preload?: boolean }) {
   return (
-    <svg
-      className="brand-mark"
-      viewBox="0 0 48 48"
-      aria-hidden="true"
-      focusable="false"
-    >
-      <rect x="1" y="1" width="46" height="46" rx="23" />
-      <path d="M15 14.5h18M15 24h13M15 33.5h18" />
-      <path className="brand-mark-accent" d="M33 14.5 24 33.5" />
-    </svg>
+    <span className="company-logo">
+      <Image
+        className="company-logo-image"
+        src={withBasePath("/eva-conseil-europe.png")}
+        alt=""
+        width={1254}
+        height={1254}
+        preload={preload}
+      />
+    </span>
   );
 }
 
@@ -148,11 +149,7 @@ export function HoldingSite({ locale }: { locale: Locale }) {
       <header className="site-header" id="top">
         <div className="container header-inner">
           <a className="brand" href={withBasePath(localeRoutes[locale])} aria-label={a11y.home}>
-            <BrandMark />
-            <span className="brand-wordmark">
-              <strong>EVA</strong>
-              <span>CONSEIL EUROPE</span>
-            </span>
+            <CompanyLogo preload />
           </a>
 
           <nav className="desktop-nav" aria-label={a11y.primaryNav}>
@@ -208,11 +205,7 @@ export function HoldingSite({ locale }: { locale: Locale }) {
               <div className="orbit-node orbit-node-two" />
               <div className="orbit-node orbit-node-three" />
               <div className="hero-monogram">
-                <span>E</span>
-                <i />
-                <span>V</span>
-                <i />
-                <span>A</span>
+                <CompanyLogo />
               </div>
               <div className="art-label art-label-top">HOLDING / RO</div>
               <div className="art-label art-label-bottom">45° N / 25° E</div>
@@ -386,11 +379,7 @@ export function HoldingSite({ locale }: { locale: Locale }) {
             href={withBasePath(localeRoutes[locale])}
             aria-label={a11y.home}
           >
-            <BrandMark />
-            <span className="brand-wordmark">
-              <strong>EVA</strong>
-              <span>CONSEIL EUROPE</span>
-            </span>
+            <CompanyLogo />
           </a>
           <p>{copy.footer.descriptor}</p>
           <a className="back-to-top" href="#top">
