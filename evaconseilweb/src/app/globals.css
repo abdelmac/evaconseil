@@ -1635,6 +1635,10 @@ svg {
     grid-template-columns: 1fr auto;
   }
 
+  .brand-footer {
+    width: 9rem;
+  }
+
   .footer-main > p {
     grid-column: 1 / -1;
     grid-row: 2;
@@ -1661,7 +1665,6 @@ svg {
   .header-actions {
     gap: 0.25rem;
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
